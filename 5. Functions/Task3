@@ -1,0 +1,27 @@
+// Funtions3.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+unsigned countDigits(unsigned number)
+{
+    unsigned count =0;
+    while (number > 0)
+    {
+        unsigned lastDigit = number % 10;
+        count++;
+        number /= 10;
+    }
+    return count;
+}
+
+int main()
+{
+    std::cout << "Enter number: ";
+
+    unsigned number;
+    cin >> number;
+
+    cout << "Count of digits: " << countDigits(number) << endl;
+}
